@@ -1,9 +1,8 @@
 const express = require("express");
-const router = express.Router()
+const router = express.Router();
+const requestController = require("../controller/requestcontroller");
 
-
-const courseController = require("../controllers/courseController")
-router.post("/reg",courseController.createcourse);
+router.post("/blood", requestController.createRequest); // Corrected function name to createRequest
+router.post("/login", requestController.loginRequest); // Corrected function name to loginRequest
+router.get("/kiran", requestController.getRequest);
 module.exports = router;
-
-
