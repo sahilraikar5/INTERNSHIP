@@ -5,13 +5,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const routes = require("./routes/route")
-const cors = require("cors");
 app.use(express.json());
-app.use(cors());
 app.use("/", routes);
 // db connection
 mongoose
-    .connect("mongodb+srv://sahilraikar2439:KA30L2439@cluster0.hgps8ko.mongodb.net/final")
+    .connect("mongodb+srv://sahilraikar2439:KA30L2439@cluster0.hgps8ko.mongodb.net/validation")
     .then(() => {
         console.log("DB CONNECTED");
 
