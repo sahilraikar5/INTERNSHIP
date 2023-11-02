@@ -1,7 +1,7 @@
 //STUDENT MODEL
 const mongoose = require("mongoose");
 
-let requestSchema = new mongoose.Schema({
+let donateSchema = new mongoose.Schema({
     Name:{
         type:String,
         required:true,
@@ -15,7 +15,6 @@ let requestSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    
     Mobile:{
         type:Number,
         required: true,
@@ -29,4 +28,4 @@ let requestSchema = new mongoose.Schema({
     }
 },{timestamps:true});
 
-module.exports = new mongoose.model("request", requestSchema);
+module.exports = new mongoose.model("donate", donateSchema);

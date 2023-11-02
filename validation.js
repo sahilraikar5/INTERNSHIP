@@ -12,5 +12,5 @@ const isValid = function(value){
 let isValidName = /^[a-zA-Z]*$/;
 let isValidEmail=/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 let isValidMobile=/^(?:(?:\+|0{0,2})91(\s*|[\-])?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/;
-
-module.exports = {isValidBody,isValid,isValidName,isValidEmail,isValidMobile};
+let isValidBlood_type = /^(A|B|AB|O)[+-]$/i;
+module.exports = {isValidBody,isValid,isValidName,isValidEmail,isValidMobile,isValidBlood_type};

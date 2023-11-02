@@ -10,7 +10,7 @@ let createRequest = async (req, res) => {
             return res.status(400).send({ status: false, msg: "No data provided" });
         }
 
-        const { Name, Email, Blood_type, Gender, Mobile, Location } = data;
+        const { Name, Email, Blood_type,  Mobile, Location } = data;
 
         if (!Validator.isValid(Name) || !Validator.isValidName.test(Name)) {
             return res.status(400).send({ status: false, msg: "Invalid or missing Name" });
@@ -30,9 +30,7 @@ let createRequest = async (req, res) => {
             return res.status(400).send({ status: false, msg: "Blood type is required" });
         }
 
-        if (!Validator.isValid(Gender)) {
-            return res.status(400).send({ status: false, msg: "Gender is required" });
-        }
+        
 
         if (!Validator.isValid(Mobile) || !Validator.isValidMobile.test(Mobile)) {
             return res.status(400).send({ status: false, msg: "Invalid or missing Mobile" });
